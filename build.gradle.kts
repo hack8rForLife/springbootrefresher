@@ -24,6 +24,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
     implementation("org.projectlombok:lombok")
+    implementation("org.springframework.boot:spring-boot-starter-validation")
 
     // Optional: Adds H2 console auto-config enhancements & hot-swapping
     developmentOnly("org.springframework.boot:spring-boot-devtools")

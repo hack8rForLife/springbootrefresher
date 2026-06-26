@@ -1,24 +1,47 @@
 package com.example.springbootfullrefresher.model;
 
-import lombok.*;
+import lombok.Data;
 
 @Data
-@RequiredArgsConstructor
-@NoArgsConstructor(force = true, access = AccessLevel.PRIVATE)
 public class Ingredient {
 
-    private  String id;
-    private  String name;
-    private  Type type;
+    private String id;
+    private String name;
+    private Type type;
 
-    public Ingredient(String flto, String flourTortilla, Type type) {
-        this.id = flto;
-        this.name = flourTortilla;
+    // MANUALLY WRITTEN CONSTRUCTOR
+    public Ingredient(String id, String name, Type type) {
+        this.id = id;
+        this.name = name;
         this.type = type;
     }
 
-    public static enum Type {
-        WRAP,PROTEIN,VEGGIES,CHEESE,SAUCE;
-        public String toString;
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Ingredient() {}
+
+    public enum Type {
+        WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE
+    }
+
+    public Type getType() {
+        return type;
+    }
+    public void setType(Type type) {
+        this.type = type;
     }
 }
